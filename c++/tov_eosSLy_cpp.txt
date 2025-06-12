@@ -1,0 +1,7 @@
+#for eos = ../eos_tables/eosSLy.lorene
+#Grav_Mass (solar mass) Radius (km) Lambda (dimensionless) rhoc (gm/cm^3) Compactness (dimensionless) Baryon_Mass (solar mass)
+0.8087  11.9593  7224.8276  6.0000e+14  0.0999  0.8800
+1.5839  11.5979  129.6747  1.0194e+15  0.2017  1.8925
+2.0326  10.4336  7.9545  1.7321e+15  0.2877  2.7133
+1.9608  8.9539  1.9146  2.9428e+15  0.3234  2.8413
+1.7136  7.9276  1.5036  5.0000e+15  0.3192  2.5885
