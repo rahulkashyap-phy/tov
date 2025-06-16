@@ -45,6 +45,8 @@ The C++ version produces results that match the original Python implementation w
 | Radius (km) | 11.97 | 11.96 | 0.08% |
 | Compactness | 0.0998 | 0.0999 | 0.1% |
 
+- rahul/17.Jun.2025: Compared the MATLAB output with the C++; match is excellent!; saved figures ub NN-TW
+
 ## Physical Constants
 
 All constants are in CGS units:
