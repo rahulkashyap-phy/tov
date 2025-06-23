@@ -102,7 +102,7 @@ mp = 1.6726231e-24 # g
 # N - Newton: mks force unit
 # KG_PER_M_CUBED: density conversion to mks
 # N_PER_M_SQUARED: pressure conversion to mks
-CGS_EV = 1.60217646-12 # erg
+CGS_EV = 1.60217646e-12 # erg
 CGS_M = 100.0          # cn
 CGS_KG = 1000.0       # g
 CGS_J  = 1.0e+7      # erg
