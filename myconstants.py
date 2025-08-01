@@ -62,7 +62,7 @@ MKS_LYR  = 9.4605284e15  # M
 # DYNE - Dyne: cgs force unit
 # GRAM_PER_CM_CUBED: density conversion to cgs
 # DYNE_PER_CM_SQUARED: pressure conversion to cgs
-MKS_EV = 1.60217646-19 # J
+MKS_EV = 1.60217646e-19 # J
 MKS_CM = 0.01          # m
 MKS_GRAM = 0.001       # kg
 MKS_ERG  = 1.0e-7      # J
