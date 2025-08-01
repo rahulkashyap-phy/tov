@@ -339,7 +339,7 @@ public:
         outfile << "#Grav_Mass (solar mass) Radius (km) Lambda (dimensionless) rhoc (gm/cm^3) Compactness (dimensionless) Baryon_Mass (solar mass)\n";
         
         double pmin = 1.0e-10;
-        int len_seq = 5;
+        int len_seq = 500;
         
         // Generate rhoc array
         std::vector<double> rhoc_arr(len_seq);
@@ -411,12 +411,54 @@ public:
         std::cout << "Total time elapsed: " << total_duration.count() << " seconds" << std::endl;
     }
 };
+/*
+ * Note: The following code is commented out because it requires the matplotlibcpp library
+ * for plotting, which is not included in this example. Uncomment and include the library
+ * if you want to use the plotting functionality.
+ */
+/*
+// Include matplotlibcpp for plotting
+#include "matplotlibcpp.h"
+namespace plt = matplotlibcpp;
 
+// Plot Mass-Radius curve and save as PNG and PDF
+void plot_mass_radius(const std::string& filename) {
+    std::ifstream infile(filename);
+    if (!infile.is_open()) {
+        std::cerr << "Could not open " << filename << " for plotting." << std::endl;
+        return;
+    }
+
+    std::vector<double> mass, radius;
+    std::string line;
+    while (std::getline(infile, line)) {
+        if (line.empty() || line[0] == '#') continue;
+        std::istringstream iss(line);
+        double m, r;
+        if (!(iss >> m >> r)) continue;
+        mass.push_back(m);
+        radius.push_back(r);
+    }
+    infile.close();
+
+    plt::figure_size(800, 600);
+    plt::plot(radius, mass, "b-");
+    plt::xlabel("Radius (km)");
+    plt::ylabel("Gravitational Mass (M_sun)");
+    plt::title("Mass-Radius Relation");
+    plt::grid(true);
+    plt::tight_layout();
+    plt::save("mass_radius.png");
+    plt::save("mass_radius.pdf");
+    std::cout << "Saved mass-radius plot as mass_radius.png and mass_radius.pdf" << std::endl;
+}
+*/
 int main() {
     try {
         std::string eos_file = "../eos_tables/eosSLy.lorene";
         TOVSolver solver(eos_file);
         solver.solve();
+        //plot_mass_radius("tov_eosSLy_cpp.txt"); 
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
         return 1;
